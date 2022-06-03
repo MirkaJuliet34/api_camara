@@ -16,13 +16,13 @@ comandos abaixo e reinicie sua sessão R:
 
 ``` r
 install.packages("devtools")
-devtools::install_github("MirkaJuliet34/camara.leg")
+devtools::install_github("MirkaJuliet34/api_camara")
 ```
 
 Carregue o pacote
 
 ``` r
-library(camara.leg)
+library(api_camara)
 ```
 
 ## Baixando as informações da API
