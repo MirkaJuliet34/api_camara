@@ -50,27 +50,3 @@ orgaos()
 votacoes()
 ```
 
-## Exemplo de uso usando dplyr
-
-Como o camara.leg já converte os dados da API para data frame é possível
-fazer manipulações na base usando o dplyr.
-
-``` r
-# use install.packages("dplyr") caso ainda não tenha instalado
-library(dplyr)
-
-deputados <- deputados()
-
-deputados %>% 
-  filter(siglaUf == "PE") %>% 
-  select(nome, siglaPartido, email) %>% 
-  head()
-```
-
-    ##               nome  siglaPartido                             email
-    ## 1   André de Paula           PSD    dep.andredepaula@camara.leg.br
-    ## 2   André Ferreira           PSC   dep.andreferreira@camara.leg.br
-    ## 3 Augusto Coutinho SOLIDARIEDADE dep.augustocoutinho@camara.leg.br
-    ## 4     Carlos Veras            PT     dep.carlosveras@camara.leg.br
-    ## 5    Daniel Coelho     CIDADANIA    dep.danielcoelho@camara.leg.br
-    ## 6    Danilo Cabral           PSB    dep.danilocabral@camara.leg.br
